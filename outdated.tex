@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{background}
+% \backgroundsetup{color=black,scale=2,contents={This revision is outdated and preserved for historical purposes only. \newline Check for the most recent revision at \url{https://named-data.net/publications/techreports/}}}
+
+\usepackage{lipsum}
+
+\SetBgContents{\parbox{6in}{\centering This revision is {\Large{\bf OUTDATED}} and preserved for historical purposes only. Check for the most recent revision at \url{https://named-data.net/publications/techreports/}}}% Set contents
+\SetBgPosition{current page.west}% Select location
+\SetBgVshift{-0.5cm}% Add vertical shift (results in a shift in x direction due to rotation)
+\SetBgOpacity{1.0}% Select opacity
+\SetBgAngle{90.0}% Select rotation of logo
+\SetBgScale{1.3}% Select scale factor of logo
+
+\SetBgColor{Red}
+
+\usepackage[final]{pdfpages}
+
+\begin{document}
+\pagestyle{headings}
+\hspace{0pt}
+\vfill
+\Large
+{
+\centering
+This revision is {\bf OUTDATED} and preserved for historical purposes only.
+
+\vspace{1cm}
+
+\centering
+Check for the most recent revision at
+
+\url{https://named-data.net/publications/techreports/}
+}
+\vfill
+\hspace{0pt}
+\pagebreak
+
+\includepdf[pages=-]{\origfile}
+
+\end{document}
